@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+:root {
+    --font1: 'Jersey 15', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: #0b4459;
+    padding: 30px;
+    border: 1px solid black;
+    color: white;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecalho > img {
+    padding-left: 20vh;
+    height: 100px;
+}
+
+#cabecalho-titulo > h1, p {
+    font-family: var(--font1);
+    font-variant: small-caps;
+}
+
+#cabecalho-titulo > h1 {
+    font-size: 5em;
+    letter-spacing: .2rem;
+}
+
+#cabecalho-titulo > p {
+    font-size: 1.5em;
+}
