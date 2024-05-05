@@ -1,9 +1,13 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 
 :root {
     --font1: 'Jersey 15', cursive;
+    --font2: 'Aldrich', sans-serif;
+    --cor1: #004459;
+    --cor2: #ffffff;
 }
 
 * {
@@ -11,14 +15,24 @@
     padding: 0px;
 }
 
+body {
+    background-color: #DEDEDE;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+/* Começo do Cabeçalho */
+
 header {
-    background-color: #0b4459;
-    padding: 30px;
+    background-color: #006889;
     border: 1px solid black;
-    color: white;
+    color: var(--cor2);
+    
 }
 
 .cabecalho {
+    padding: 30px 30px 10px 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,20 +40,177 @@ header {
 }
 
 .cabecalho > img {
-    padding-left: 20vh;
-    height: 100px;
+    padding-left: 21vh;
+    max-height: 85px;
 }
 
 #cabecalho-titulo > h1, p {
-    font-family: var(--font1);
-    font-variant: small-caps;
+    font-family: var(--font2);
 }
 
 #cabecalho-titulo > h1 {
-    font-size: 5em;
-    letter-spacing: .2rem;
+    font-size: 3em;
+    letter-spacing: .3rem;
+    font-weight: 100;
 }
 
 #cabecalho-titulo > p {
-    font-size: 1.5em;
+    font-size: 1em;
+}
+
+/* Começo da Nav */
+
+.nav-cabecalho {
+    background-image: linear-gradient(0deg, #001921, #004459, #006889);
+    padding-top: 10px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: end;
+}
+
+.itens-nav {
+    list-style: none;
+    display: flex;
+}
+
+.itens-nav > li > a {
+    padding-left: 4vh;
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: var(--font2);
+}
+
+.itens-nav > li > a:hover {
+    text-decoration: underline;
+}
+
+/* Começo do Conteúdo Principal*/
+
+main {
+    color: var(--cor1);
+    font-family: var(--font2);
+    display: inline-block;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Começo do Menu Lateral*/
+
+.nav-lado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Começo da Div do Discord */
+
+.discord {
+    margin: 40px 0vh 0px 25vh;
+    padding: 10px 20px 10px 20px ;
+    background-color: var(--cor2);
+    border: 3px solid var(--cor1);
+    border-radius: 18px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.34);
+}
+
+.discord > h2{
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: .1rem;
+}
+
+.discord-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.discord-link > a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.discord-logo {
+    height: 40px;
+
+}
+
+/* Começo das Classificações */
+
+.classificacoes {
+    margin: 40px 0vh 0px 25vh;
+    padding: 10px 20px 10px 20px ;
+    background-color: var(--cor2);
+    border: 3px solid var(--cor1);
+    border-radius: 18px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.34);
+}
+
+.classificacoes > h2 {
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: .1rem;
+}
+
+.classificacoes-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8em
+}
+
+.classificacoes-lista > li > a {
+    text-decoration: none;
+    color: var(--cor1);
+    
+}
+
+.classificacoes-lista > li > a::after {
+    content: " «";
+}
+
+.classificacoes-lista > li > a::before {
+    content: "» ";
+}
+
+.classificacoes-lista > li > a:hover {
+    text-decoration: underline;
+    font-size: 1.1em;
+    color: red;
+}
+
+/* Começo dos Grupos de Interesse*/
+
+.grupo-interesse {
+    margin: 40px 0vh 0px 25vh;
+    padding: 10px 20px 10px 20px ;
+    background-color: var(--cor2);
+    border: 3px solid var(--cor1);
+    border-radius: 18px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.34);
+}
+
+
+
+/* Começo das Noticias */
+
+.principal {
+    width: 93vh;
+    max-width: 95vh;
+    margin: 40px 25vh 0vh 8vh;
+    padding: 10px 20px 10px 20px ;
+    background-color: var(--cor2);
+    border: 3px solid var(--cor1);
+    border-radius: 18px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.34);
+}
+
+.grupos {
+    text-align: justify;
 }
